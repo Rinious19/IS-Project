@@ -27,7 +27,8 @@ export default function PredictNN() {
     formData.append('file', selectedFile);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict/image', formData, {
+      //! For Localhost: http://127.0.0.1:8000/predict/image
+      const response = await axios.post('https://is-project-production.up.railway.app/predict/image', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setResult(response.data);

@@ -63,7 +63,8 @@ export default function PredictML() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('http://127.0.0.1:8000/predict/network', {
+      //! For Localhost: http://127.0.0.1:8000/predict/network
+      const response = await axios.post('https://is-project-production.up.railway.app/predict/network', {
         ...formData,
         // แปลงค่า string ให้เป็นตัวเลขทั้งหมด
         duration: Number(formData.duration),
