@@ -1,22 +1,34 @@
 # 🚀 IS Project 2568 - Full-Stack Machine Learning Web Application
 
-![React](https://img.shields.io/badge/React-19.2.4-blue?style=flat&logo=react)
+## 🌐 Frontend
+
+![React](https://img.shields.io/badge/React-19.2.4-61DAFB?style=flat&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-8.0.1-646CFF?style=flat&logo=vite&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-blue?style=flat&logo=typescript)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.2.2-38B2AC?style=flat&logo=tailwind-css)
-![React Icons](https://img.shields.io/badge/React_Icons-5.6.0-61DAFB?style=flat&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4.2.2-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-7.13.2-CA4245?style=flat&logo=reactrouter&logoColor=white)
+![React Icons](https://img.shields.io/badge/React_Icons-5.6.0-61DAFB?style=flat&logo=react&logoColor=black)
 ![Axios](https://img.shields.io/badge/Axios-1.14.0-5A29E4?style=flat&logo=axios&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?style=flat&logo=fastapi&logoColor=white)
-![Uvicorn](https://img.shields.io/badge/Uvicorn-0.29-222222?style=flat&logo=uvicorn&logoColor=white)
-![Scikit Learn](https://img.shields.io/badge/scikit--learn-1.4-F7931E?style=flat&logo=scikitlearn&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-2.2-150458?style=flat&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-1.26-013243?style=flat&logo=numpy&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.16-FF6F00?style=flat&logo=tensorflow&logoColor=white)
-![python-multipart](https://img.shields.io/badge/python--multipart-latest-3776AB?style=flat&logo=python&logoColor=white)
-![Pillow](https://img.shields.io/badge/Pillow-10.3-8CAAE6?style=flat&logo=python&logoColor=white)
-![Joblib](https://img.shields.io/badge/joblib-1.4-374151?style=flat&logo=python&logoColor=white)
+
+## ⚙️ Backend
+
+![FastAPI](https://img.shields.io/badge/FastAPI-0.135.2-009688?style=flat&logo=fastapi&logoColor=white)
+![Uvicorn](https://img.shields.io/badge/Uvicorn-0.42.0-222222?style=flat&logo=uvicorn&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=flat&logo=python&logoColor=white)
+![python-multipart](https://img.shields.io/badge/python--multipart-0.0.22-3776AB?style=flat&logo=python&logoColor=white)
+
+## 🧠 Machine Learning
+
+![Scikit Learn](https://img.shields.io/badge/scikit--learn-1.8.0-F7931E?style=flat&logo=scikitlearn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.21.0-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-3.0.1-150458?style=flat&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-2.3.2-013243?style=flat&logo=numpy&logoColor=white)
+![Joblib](https://img.shields.io/badge/Joblib-1.5.3-374151?style=flat&logo=python&logoColor=white)
+
+## 🖼️ Image Processing
+
+![Pillow](https://img.shields.io/badge/Pillow-11.1.0-8CAAE6?style=flat&logo=python&logoColor=white)
+
 
 โปรเจคนี้เป็นส่วนหนึ่งของรายวิชา Intelligent Systems (IS) ปีการศึกษา 2568 โดยเป็นการพัฒนาระบบ Web Application ที่รวบรวมการทำงานของโมเดลปัญญาประดิษฐ์ 2 ประเภท ได้แก่ Machine Learning (Ensemble) และ Neural Network (CNN) เข้าไว้ด้วยกัน ตั้งแต่กระบวนการเตรียมข้อมูล (Data Preparation) การฝึกสอนโมเดล ไปจนถึงการนำไปใช้งานจริง (Deployment) บน Cloud Server
 
@@ -109,7 +121,7 @@ npm install
 **Backend:**
 
 ```bash
-cd backend
+cd backend-api
 pip install -r requirements.txt
 ```
 
@@ -154,6 +166,14 @@ uvicorn main:app --reload
 Backend API จะพร้อมใช้งานที่ `http://127.0.0.1:8000`
 
 > 💡 **ทดสอบ API ได้ที่:** `http://127.0.0.1:8000/docs` (Swagger UI อัตโนมัติจาก FastAPI)
+
+### 5. ปัญหาที่พบบ่อย (Troubleshooting)
+หากรันคำสั่ง Backend ด้านบนไม่ได้ หรือ Terminal ฟ้องว่าไม่รู้จัก uvicorn (มักเกิดจากเครื่องมี Python หลายเวอร์ชัน หรือไม่ได้เซ็ต PATH) ให้รันคำสั่งเหล่านี้ทีละบรรทัดแทน:
+```bash
+cd backend-api
+python -m pip install -r requirements.txt
+python -m uvicorn main:app --reload
+```
 
 ---
 
