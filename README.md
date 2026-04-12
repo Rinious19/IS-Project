@@ -34,6 +34,15 @@
 
 ---
 
+## 📋 สารบัญ
+
+1. [📌 ภาพรวมของระบบ](#-ภาพรวมของระบบ-features)
+2. [📊 ข้อมูลและโมเดลที่ใช้](#-ข้อมูลและโมเดลที่ใช้-datasets--models)
+3. [🛠️ เทคโนโลยีที่ใช้](#-เทคโนโลยีที่ใช้-tech-stack)
+4. [📁 โครงสร้างโปรเจ็ค](#-โครงสร้างโปรเจ็ค)
+5. [💻 วิธีการติดตั้งและรันโปรเจค](#-วิธีการติดตั้งและรันโปรเจค-getting-started)
+6. [☁️ การนำขึ้นระบบ](#-การนำขึ้นระบบ-deployment)
+
 ## 📌 ภาพรวมของระบบ (Features)
 
 ระบบประกอบด้วยหน้าเว็บไซต์หลัก 4 หน้า
@@ -88,6 +97,54 @@
 - Scikit-learn & Pandas (ประมวลผลโมเดล ML)
 - TensorFlow / Keras (ประมวลผลโมเดล NN)
 - Joblib (โหลดไฟล์โมเดล `.pkl`)
+
+---
+
+## 📁 โครงสร้างโปรเจ็ค
+
+```
+📁 IS-Project
+├── 📁 backend-api
+│   ├── 📁 models
+│   │   ├── 📄 cifar10_cnn_pretrained.keras
+│   │   ├── 📄 nsl_kdd_encoders.pkl
+│   │   ├── 📄 nsl_kdd_ensemble.pkl
+│   │   └── 📄 nsl_kdd_scaler.pkl
+│   ├── 🐍 main.py
+│   └── 📄 requirements.txt
+├── 📁 frontend
+│   ├── 📁 public
+│   │   ├── 🖼️ favicon.svg
+│   │   └── 🖼️ icons.svg
+│   ├── 📁 src
+│   │   ├── 📁 assets
+│   │   │   ├── 🖼️ hero.png
+│   │   │   ├── 🖼️ react.svg
+│   │   │   └── 🖼️ vite.svg
+│   │   ├── 📁 components
+│   │   │   └── 📄 Navbar.tsx
+│   │   ├── 📁 pages
+│   │   │   ├── 📄 AboutML.tsx
+│   │   │   ├── 📄 AboutNN.tsx
+│   │   │   ├── 📄 PredictML.tsx
+│   │   │   └── 📄 PredictNN.tsx
+│   │   ├── 🎨 App.css
+│   │   ├── 📄 App.tsx
+│   │   ├── 🎨 index.css
+│   │   └── 📄 main.tsx
+│   ├── ⚙️ .gitignore
+│   ├── 📝 README.md
+│   ├── 📄 eslint.config.js
+│   ├── 🌐 index.html
+│   ├── ⚙️ package-lock.json
+│   ├── ⚙️ package.json
+│   ├── ⚙️ tsconfig.app.json
+│   ├── ⚙️ tsconfig.json
+│   ├── ⚙️ tsconfig.node.json
+│   ├── ⚙️ vercel.json
+│   └── 📄 vite.config.ts
+└── 📝 README.md
+```
 
 ---
 
