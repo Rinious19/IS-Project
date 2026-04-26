@@ -110,6 +110,7 @@
 │   │   ├── 📄 nsl_kdd_encoders.pkl
 │   │   ├── 📄 nsl_kdd_ensemble.pkl
 │   │   └── 📄 nsl_kdd_scaler.pkl
+│   ├── 🐳 Dockerfile
 │   ├── 🐍 main.py
 │   └── 📄 requirements.txt
 ├── 📁 frontend
@@ -132,6 +133,7 @@
 │   │   ├── 📄 App.tsx
 │   │   ├── 🎨 index.css
 │   │   └── 📄 main.tsx
+│   ├── ⚙️ .env.example
 │   ├── ⚙️ .gitignore
 │   ├── 📝 README.md
 │   ├── 📄 eslint.config.js
@@ -184,19 +186,22 @@ pip install -r requirements.txt
 
 ---
 
-### 3. แก้ไข API Endpoint
+### 3. ตั้งค่า Environment Variables
 
-ก่อนรันโปรเจค ให้แก้ไข URL ของ API ในไฟล์ Frontend ให้ชี้มาที่ Backend ที่รันบนเครื่องของคุณ:
+เพื่อความสะดวกในการสลับระหว่างการรันในเครื่อง (Local) และบนเซิร์ฟเวอร์จริง (Production) โปรเจคนี้จะใช้ไฟล์ .env ในการเชื่อมต่อ API:
 
-- **ไฟล์ `PredictML.tsx`** — แก้ URL เป็น:
-  ```
-  http://127.0.0.1:8000/predict/network
-  ```
-
-- **ไฟล์ `PredictNN.tsx`** — แก้ URL เป็น:
-  ```
-  http://127.0.0.1:8000/predict/image
-  ```
+1. เข้าไปที่โฟลเดอร์ frontend
+```
+cd frontend
+```
+2. คัดลอกไฟล์ .env.example แล้วสร้างเป็นไฟล์ใหม่ชื่อ .env (หรือใช้คำสั่งด้านล่าง)
+```
+cp .env.example .env
+```
+3. เปิดไฟล์ .env และตรวจสอบให้แน่ใจว่ากำหนด URL ชี้มาที่ Backend บนเครื่อง:
+```
+VITE_API_URL=http://localhost:8000
+```
 
 ---
 
@@ -241,7 +246,7 @@ python -m uvicorn main:app --reload
 | ส่วน | Platform | ลิงก์ |
 |---|---|---|
 | **Frontend** | Vercel | 🔗 https://is-project-two.vercel.app |
-| **Backend** | Railway | 🔗 https://is-project-production.up.railway.app |
+| **Backend** | Hugging Face | 🔗 https://rinious19-is-api.hf.space |
 
 ---
 
