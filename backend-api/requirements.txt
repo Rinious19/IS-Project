@@ -1,9 +1,9 @@
 fastapi
 uvicorn
-scikit-learn
 pandas
 numpy
-tensorflow
-python-multipart
-Pillow
+scikit-learn==1.6.1
 joblib
+tensorflow-cpu==2.16.1
+Pillow
+python-multipart

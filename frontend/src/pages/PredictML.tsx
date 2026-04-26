@@ -64,7 +64,11 @@ export default function PredictML() {
     setLoading(true);
     try {
       //! For Localhost: http://127.0.0.1:8000/predict/network
-      const response = await axios.post('https://is-project-production.up.railway.app/predict/network', {
+      //* 1. ดึงค่า Base URL จาก .env (ถ้าไม่มีให้ fallback เป็น localhost)
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://127.0.0.1:8000';
+      //* 2. นำ Base URL มาต่อกับ Endpoint ที่ต้องการ
+      const endpoint = `${API_BASE_URL}/predict/network`;
+      const response = await axios.post(endpoint, { 
         ...formData,
         // แปลงค่า string ให้เป็นตัวเลขทั้งหมด
         duration: Number(formData.duration),
